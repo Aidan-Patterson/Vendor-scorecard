@@ -1,6 +1,6 @@
 # Vendor-Scorecard Macros
 
-This repository contains an Excel workbook with VBA macros designed to automate various data-processing tasks such as filtering data, manipulating specific worksheets, and processing information based on user inputs. There are buttons and shapes on specific Excel sheets to make using these macros easier for users.
+This Excel workbook is designed to automate the process of grading vendors based on various performance metrics. It filters and processes data related to Purchase Orders (PO Data), Non-Conformance Reports (NCR Data), Rework Costs, and Costs of Poor Quality. The workbook uses a combination of VBA macros, buttons, and shapes to help companies streamline vendor evaluation and scorecard generation. These macros enable efficient filtering and manipulation of data across different sheets to produce clear insights into vendor performance.
 
 ## Prerequisites
 
@@ -16,6 +16,17 @@ To use the macros in this workbook:
 3. Choose **Macro Settings**.
 4. Select **Enable all macros** (Note: This might pose security risks, so only enable macros from trusted sources).
 5. Click **OK** to save your settings.
+
+## What This Workbook Does
+
+This workbook automates the vendor grading process by using data from various company processes. Specifically, it handles:
+
+- **Purchase Order (PO) Data**: Filters and processes PO information, including delivery performance (e.g., early or on-time deliveries), to evaluate vendor reliability.
+- **Non-Conformance Reports (NCR Data)**: Identifies and filters NCR entries that reflect vendor quality issues and helps grade vendors based on these reports.
+- **Rework Costs**: Tracks and processes data related to rework efforts and costs due to vendor errors or defects, which affects the vendor grading.
+- **Cost of Poor Quality**: Analyzes the total cost incurred from poor quality products and processes from vendors, which contributes to the vendor score.
+
+This automated analysis helps companies generate vendor scorecards to assess vendor performance on key metrics like delivery timeliness, product quality, and cost efficiency.
 
 ## Accessing the Macros via Buttons and Shapes
 
@@ -71,7 +82,7 @@ If you need to modify or review the macros:
 
 ## Summary
 
-This Excel workbook simplifies data processing by using a combination of macros, buttons, and shape-driven workflows. The following sheets contain buttons and shapes to run specific macros:
+This Excel workbook simplifies data processing and vendor grading by using a combination of macros, buttons, and shape-driven workflows. The following sheets contain buttons and shapes to run specific macros:
 - **Printout**: Filter data by quarter.
 - **Input**: Process input data.
 - **Input Finder**: Find and process input records.
