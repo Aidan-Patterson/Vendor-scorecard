@@ -1,6 +1,6 @@
-# Vendor-Scorecard 
+# Vendor-Scorecard Macros
 
-This repository contains an Excel workbook with VBA macros designed to automate vendor scorecard processing. The macros perform tasks such as filtering data, manipulating specific worksheets, and processing information based on user inputs. There are buttons on the Excel sheet to make using these macros easier for users.
+This repository contains an Excel workbook with VBA macros designed to automate various data-processing tasks such as filtering data, manipulating specific worksheets, and processing information based on user inputs. There are buttons and shapes on specific Excel sheets to make using these macros easier for users.
 
 ## Prerequisites
 
@@ -17,26 +17,27 @@ To use the macros in this workbook:
 4. Select **Enable all macros** (Note: This might pose security risks, so only enable macros from trusted sources).
 5. Click **OK** to save your settings.
 
-## Accessing the Macros via Buttons
+## Accessing the Macros via Buttons and Shapes
 
-To make things easier, the workbook contains buttons on specific sheets that allow users to run the macros directly with a single click, without needing to navigate through the Developer tab or the VBA editor.
+This workbook contains buttons and shapes on various sheets that allow users to run the macros directly without needing to navigate through the Developer tab or the VBA editor.
 
-### Buttons Overview
+### Buttons and Shapes Overview
 
-1. **Filter Data by Quarter**  
-   - **Button Location**: This button is located on the **'Input'** sheet.
-   - **Functionality**: After you input the desired quarter (e.g., **Quarter 1**, **Quarter 2**, etc.), click the button to filter the data across the following sheets:
-     - **NCR Data**
-     - **Rework Data**
-     - **Response Data**
+1. **Filter Data by Quarter**
+   - **Button and Shape Location**: These are located on the **'Printout'** sheet.
+   - **Functionality**: After you input the desired quarter in the **'Printout'** sheet (e.g., **Quarter 1**, **Quarter 2**), click the button or shape to filter the data across the relevant sheets and process it accordingly.
 
-2. **Process Vendor Data**  
-   - **Button Location**: On the **'PO Data'** sheet, you will find a button for processing vendor data.
-   - **Functionality**: Clicking this button will aggregate vendor performance data and output it into the **'PO DataOutput'** sheet. It will sum values for each vendor, including performance metrics such as **'Early'** and **'On-Time'** deliveries.
+2. **Process Input Data**
+   - **Button and Shape Location**: On the **'Input'** sheet, there are both buttons and shapes to process the input data.
+   - **Functionality**: Clicking either the button or shape will process and update the data in other related sheets, based on the information provided in the **'Input'** sheet.
 
-3. **Enter Rework Data**  
-   - **Button Location**: On the **'Input'** sheet.
-   - **Functionality**: After entering necessary data on the 'Input' sheet, click this button to automatically update the relevant rows in the **'Rework Data'** sheet. It will also update the data in an external workbook named **Vendor Scorecard TEST.xlsm**.
+3. **Find Input Records**
+   - **Button and Shape Location**: These are located on the **'Input Finder'** sheet.
+   - **Functionality**: Use the button or shape to locate and process specific records from the **'Input'** sheet by filtering and finding the required data.
+
+4. **Analyze Cost of Poor Quality**
+   - **Button and Shape Location**: On the **'Cost of Poor Quality'** sheet.
+   - **Functionality**: Clicking the button or shape triggers an analysis of the data related to the cost of poor quality and generates a report or output within the workbook.
 
 ## Additional Tools and References
 
@@ -50,17 +51,14 @@ To make things easier, the workbook contains buttons on specific sheets that all
 2. **Resetting VBA Libraries**:  
    Ensure that common libraries like **Microsoft Office Object Library** and **Microsoft Excel Object Library** are selected in the References window.
 
-3. **External Workbook Reference**:  
-   If your workbook interacts with another workbook (e.g., **Vendor Scorecard TEST.xlsm**), ensure that workbook is available in the specified directory. You may need to adjust file paths within the macro code if your directory structure differs.
-
 ## Issues and Troubleshooting
 
 ### Common Errors
 - **Missing References**:  
   If a library reference is missing, follow the instructions under the **Additional Tools and References** section.
   
-- **Button Not Working**:  
-  If a button doesn’t work when clicked, make sure macros are enabled (see the **Prerequisites** section). If macros are enabled but the button still doesn’t work, check for errors in the VBA code via the editor (`Alt + F11`).
+- **Button or Shape Not Working**:  
+  If a button or shape doesn’t work when clicked, make sure macros are enabled (see the **Prerequisites** section). If macros are enabled but the button or shape still doesn’t work, check for errors in the VBA code via the editor (`Alt + F11`).
 
 ### Debugging Tips
 - To step through the code, use the **F8** key in the VBA editor. This will allow you to run the code line by line and inspect variables for debugging.
@@ -73,10 +71,10 @@ If you need to modify or review the macros:
 
 ## Summary
 
-This Excel workbook simplifies vendor scorecard processing by using a combination of macros and button-driven workflows. You can:
-- Filter data by quarter using the **Filter Data** button on the **'Input'** sheet.
-- Process vendor data using the **Process Vendor Data** button on the **'PO Data'** sheet.
-- Enter rework data using the **Enter Rework Data** button on the **'Input'** sheet.
+This Excel workbook simplifies data processing by using a combination of macros, buttons, and shape-driven workflows. The following sheets contain buttons and shapes to run specific macros:
+- **Printout**: Filter data by quarter.
+- **Input**: Process input data.
+- **Input Finder**: Find and process input records.
+- **Cost of Poor Quality**: Analyze and report on the cost of poor quality.
 
 Ensure macros are enabled and that you have the required references set up. If you encounter issues, refer to the **Issues and Troubleshooting** section for guidance.
-
